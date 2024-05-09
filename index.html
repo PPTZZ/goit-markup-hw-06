@@ -74,7 +74,11 @@
 					<h1 class="hero-section__title">
 						EFFECTIVE SOLUTIONS FOR YOUR BUSINESS
 					</h1>
-					<button data-modal-open type="button" class="hero-section__button btn" >
+					<button
+						data-modal-open
+						type="button"
+						class="hero-section__button btn"
+					>
 						Request our service
 					</button>
 				</div>
@@ -150,31 +154,35 @@
 					</ul>
 					<h2 class="section-title atribute-section__title">What we do</h2>
 					<div class="atribute-section__image-list">
-						
 						<div class="atribute-section__image-container">
 							<img
-							src="./images/index/box-1.jpg"
-							alt="imgae of coding"
-							width="370"
+								src="./images/index/box-1.jpg"
+								alt="imgae of coding"
+								width="370"
 							/>
-							<div class="atribute-section__image-overlay"><p>DESKTOP APPS</p></div>
+							<div class="atribute-section__image-overlay">
+								<p>DESKTOP APPS</p>
+							</div>
 						</div>
 						<div class="atribute-section__image-container">
 							<img
-							src="./images/index/box-2.jpg"
-							alt="image of mobile apps"
-							width="370"
+								src="./images/index/box-2.jpg"
+								alt="image of mobile apps"
+								width="370"
 							/>
-							<div class="atribute-section__image-overlay"><p>MOBILE APPS</p></div>
+							<div class="atribute-section__image-overlay">
+								<p>MOBILE APPS</p>
+							</div>
 						</div>
 						<div class="atribute-section__image-container">
-
 							<img
-							src="./images/index/box-3.jpg"
-							alt="image of design"
-							width="370"
+								src="./images/index/box-3.jpg"
+								alt="image of design"
+								width="370"
 							/>
-							<div class="atribute-section__image-overlay"><p>DESIGN SOLUTIONS</p></div>
+							<div class="atribute-section__image-overlay">
+								<p>DESIGN SOLUTIONS</p>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -549,7 +557,6 @@
 								</svg>
 							</div>
 						</a>
-
 						<a
 							href="https://www.facebook.com/goit.romania/"
 							class="footer__icon-link"
@@ -578,14 +585,37 @@
 						</a>
 					</div>
 				</div>
+				<form>
+					<label for="newsletter-email" class="footer__input-label">SUBSCRIBE TO THE NEWSLETTER</label>
+					<br />
+					<div>
+						<input
+						type="text"
+						name="newsletter-email"
+						id="newsletter-email"
+						placeholder="E-mail"
+						class="input-field footer__input"
+						/>
+						<button type="submit" class="btn footer__input-btn">
+							Subscribe
+							<svg class="send-logo">
+								<use href="./images/icons/form-icons.svg#icon-icon-send"></use>
+							</svg>
+						</button>
+					</div>
+				</form>
 			</div>
 		</footer>
 		<!-- Modal -->
 		<div data-modal class="modal__backdrop is-hidden">
 			<div class="modal">
-				<button type="button" data-modal-close class="modal__close-btn flex center">
+				<button
+					type="button"
+					data-modal-close
+					class="modal__close-btn flex center"
+				>
 					<svg class="modal__close-icon">
-						<use href="./images/icons/close-icon.svg#close-icon" ></use>
+						<use href="./images/icons/close-icon.svg#close-icon"></use>
 					</svg>
 				</button>
 			</div>
