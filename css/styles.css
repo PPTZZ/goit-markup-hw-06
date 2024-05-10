@@ -18,6 +18,7 @@
 * {
 	margin: 0;
 	padding: 0;
+	transition: cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 }
 
 body {
@@ -44,7 +45,6 @@ a {
 	font-size: 16px;
 	font-family: inherit;
 	padding: 6px 22px;
-	transition: cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 }
 
 .btn:hover,
@@ -106,12 +106,19 @@ ul {
 	gap: 30px;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+}
+
+input[type='number'] {
+	-moz-appearance: textfield;
+}
+
 .input-field {
 	height: 50px;
-	background-color: var(--color-background-primary);
-	border: 1px solid rgba(255, 255, 255, 0.3);
+	border: 1px solid rgba(33, 33, 33, 0.2);
 	border-radius: 4px;
-	color: rgba(255, 255, 255, 0.6);
 	font-size: 16px;
 	line-height: 20px;
 	letter-spacing: 0.03em;
@@ -156,7 +163,6 @@ ul {
 	position: absolute;
 	top: 44px;
 	left: 0;
-	transition: cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 }
 
 .active::after {
@@ -188,7 +194,6 @@ ul {
 .header__contact-icon {
 	height: 16px;
 	max-width: 16px;
-	transition: cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 }
 
 .contact__link {
@@ -198,7 +203,6 @@ ul {
 }
 
 .header__contact-container {
-	transition: cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 	gap: 10px;
 }
 .contact__link .header__contact-container:hover,
@@ -369,11 +373,6 @@ ul {
 	border-radius: 50%;
 }
 
-.team-card__icon,
-.team-card__icon-background {
-	transition: cubic-bezier(0.4, 0, 0.2, 1) 250ms;
-}
-
 .team-card__icon-link:focus {
 	.team-card__icon-background {
 		background-color: var(--color-primary);
@@ -399,7 +398,6 @@ ul {
 
 .client-list__logo {
 	fill: var(--color-logo-main);
-	transition: cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 }
 
 .client-list__logo:hover,
@@ -412,7 +410,6 @@ a:focus .client-list__logo {
 	height: 92px;
 	border: 1px solid var(--color-logo-main);
 	border-radius: 4px;
-	transition: cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 }
 
 .client-list__background:hover,
@@ -429,7 +426,7 @@ a:focus .client-list__background {
 
 .footer-container {
 	align-items: baseline;
-  justify-content: space-around;
+	justify-content: space-around;
 	gap: 70px;
 }
 
@@ -455,7 +452,6 @@ a:focus .client-list__background {
 .address-container {
 	a {
 		color: var(--color-description);
-		transition: cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 	}
 }
 
@@ -490,7 +486,6 @@ a:focus .client-list__background {
 	stroke: var(--white);
 	width: 20px;
 	height: 20px;
-	transition: cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 }
 .footer__icon-background {
 	background-color: rgba(255, 255, 255, 10%);
@@ -498,7 +493,6 @@ a:focus .client-list__background {
 	width: 44px;
 	border: 0 solid white;
 	border-radius: 50%;
-	transition: cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 }
 
 .footer__icon-link:focus {
@@ -538,6 +532,9 @@ form {
 
 .footer__input {
 	width: 350px;
+	background-color: var(--color-background-primary);
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	color: rgba(255, 255, 255, 0.6);
 }
 
 .footer__input-btn {
@@ -553,6 +550,7 @@ form {
 .send-logo {
 	width: 24px;
 	height: 24px;
+	fill: var(--white);
 }
 
 /* PORTOFOLIO PAGE */
@@ -587,7 +585,6 @@ form {
 	width: 100%;
 	height: 100%;
 	transform: translateY(100%);
-	transition: 250ms;
 }
 
 .overlay {
@@ -636,6 +633,7 @@ form {
 }
 
 /* Modal */
+
 .is-hidden {
 	visibility: hidden;
 	opacity: 0;
@@ -657,7 +655,7 @@ form {
 
 .modal {
 	background-color: var(--white);
-	height: 580px;
+	height: 581px;
 	width: 530px;
 	position: absolute;
 	top: 50%;
@@ -668,6 +666,7 @@ form {
 	box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 	border-radius: 4px;
 	transition-duration: 150ms;
+	padding: 40px;
 }
 
 .is-hidden {
@@ -691,4 +690,90 @@ form {
 .modal__close-icon {
 	width: 18px;
 	height: 18px;
+	fill: var(--black);
+}
+
+.modal__close-btn:hover,
+:focus {
+	.modal__close-icon {
+		fill: var(--color-primary);
+	}
+}
+
+.modal__form-heading {
+	font-size: 20px;
+	font-weight: 700;
+	line-height: 23.44px;
+	letter-spacing: 0.03em;
+	color: var(--color-title);
+}
+
+.modal__form {
+	flex-flow: column nowrap;
+	> input {
+		padding-left: 45px;
+		height: 40px;
+	}
+	> input:hover,
+	:focus {
+		border: 1px solid var(--color-primary);
+	}
+	> input:hover + .input-icon,
+	> input:focus + .input-icon {
+		svg {
+			fill: var(--color-primary);
+		}
+	}
+}
+
+.input-label {
+	margin-top: 10px;
+	margin-bottom: 5px;
+}
+
+.input-icon {
+	position: relative;
+	svg {
+		height: 25px;
+		width: 25px;
+		position: absolute;
+		top: -33px;
+		left: 15px;
+	}
+}
+
+.modal__form {
+	textarea {
+		height: 120px;
+	}
+	textarea:hover,
+	:focus {
+		border: 1px solid var(--color-primary);
+	}
+	textarea::placeholder {
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 14px;
+		letter-spacing: 0.1em;
+		color: rgba(117, 117, 117, 0.5);
+	}
+}
+
+.conditions-box {
+	margin-top: 20px;
+	margin-bottom: 30px;
+	a {
+		text-decoration: underline;
+		color: var(--color-primary);
+	}
+}
+
+.modal__submit {
+	width: 200px;
+	background-color: var(--color-primary);
+	color: var(--white);
+	align-self: center;
+	box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2);
+	box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+	box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 }
