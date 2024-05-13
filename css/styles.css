@@ -115,6 +115,10 @@ input[type='number'] {
 	-moz-appearance: textfield;
 }
 
+[type='checkbox'] {
+	display: none;
+}
+
 .input-field {
 	height: 50px;
 	border: 1px solid rgba(33, 33, 33, 0.2);
@@ -747,7 +751,7 @@ form {
 		height: 120px;
 	}
 	textarea:hover,
-	:focus {
+	textarea:focus {
 		border: 1px solid var(--color-primary);
 	}
 	textarea::placeholder {
@@ -760,11 +764,43 @@ form {
 }
 
 .conditions-box {
+	position: relative;
 	margin-top: 20px;
 	margin-bottom: 30px;
+	display: flex;
+	justify-content: flex-end;
+	
 	a {
 		text-decoration: underline;
 		color: var(--color-primary);
+	}
+	.unchecked{
+		height: 15px;
+		width: 15px;
+		border: 2px solid var(--color-title);
+		border-radius: 2px;
+		position: relative;
+		cursor: pointer;
+		right: 6px;
+	}
+	svg{
+		height: 18px;
+		width: 18px;
+		fill: var(--white);
+		stroke: var(--white);
+		position: absolute;
+		left: -4px;
+		top: -4px;
+		display: none;
+	}
+	[type='checkbox']:checked + .unchecked{
+		background-color: var(--color-primary);
+		border: 2px solid var(--color-primary);
+	}
+	[type='checkbox']:checked + .unchecked{
+		svg{
+			display: block;
+		}
 	}
 }
 

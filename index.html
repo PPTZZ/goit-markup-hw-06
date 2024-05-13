@@ -481,11 +481,17 @@
 				</label>
 				<label for="comments" class="input-label">Comments</label>
 				<textarea name="comments" id="comments" class="input-field" placeholder="Enter the text"></textarea>
-				<div class="conditions-box">
-					<input type="checkbox" name="terms-conditions" id="" />
-					<label for="terms-conditions">I agree with the letter and accept the
-						<a href="#">Terms and Conditions</a></label>
-				</div>
+				<label class="conditions-box"><input type="checkbox" name="terms-conditions"
+						value="agree" class="tc-input" />
+					<span class="unchecked">
+						<svg>
+							<use href="./images/icons/form-icons.svg#icon-icon-check"></use>
+						</svg>
+					</span>
+					I agree with the letter and accept the
+					<a href="#">Terms and Conditions</a>
+				</label>
+
 				<button type="submit" class="btn modal__submit">Send</button>
 			</form>
 		</div>
